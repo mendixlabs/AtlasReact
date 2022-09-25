@@ -6,11 +6,10 @@ import { ButtonVariant } from "../../typings/ButtonVariant";
 import "./Button.css";
 
 const Button = ({
-    callback,
+    onClick,
     customClass,
-    icon,
     size,
-    label = "",
+    children,
     variant = ButtonVariant.primary,
     outlined = false,
     fullwidth = false,
@@ -33,17 +32,15 @@ const Button = ({
      */
     if (disabled) {
         return (
-            <button className={className} onClick={callback} data-disabled="true" aria-disabled="true">
-                {icon && <span className={classnames("glyphicon", `glyphicon-${icon}`)} aria-hidden="true"></span>}
-                {label}
+            <button className={className} onClick={onClick} data-disabled="true" aria-disabled="true">
+                {children}
             </button>
         );
     }
 
     return (
-        <button className={className} onClick={callback}>
-            {icon && <span className="glyphicon glyphicon-info-sign" aria-hidden="true"></span>}
-            {label}
+        <button className={className} onClick={onClick}>
+            {children}
         </button>
     );
 };

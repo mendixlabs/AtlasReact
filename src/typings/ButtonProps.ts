@@ -3,11 +3,10 @@ import { ButtonVariant } from "./ButtonVariant";
 import { SyntheticEvent } from "./SyntheticEvent";
 
 export interface ButtonProps {
-  callback?: SyntheticEvent;
+  onClick?: SyntheticEvent;
   customClass?: string | null;
-  icon?: string | null;
   size?: ButtonSize | null;
-  label?: string | null;
+  children?: React.ReactNode;
   variant?: ButtonVariant | null;
   outlined?: boolean | null;
   fullwidth?: boolean | null;
