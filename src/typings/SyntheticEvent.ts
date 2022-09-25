@@ -7,4 +7,5 @@
  * 
  * We might want to find a way to make this prettier and more type safe.
  */
-export type SyntheticEvent = never;
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+export type SyntheticEvent = any;
