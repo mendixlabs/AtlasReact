@@ -51,7 +51,7 @@ const Heading = ({ customClass, size, headingText }: HeadingProps): ReactElement
         }
     };
 
-    return <React.Fragment>{renderHeading()}</React.Fragment>;
+    return <>{renderHeading()}</>;
 };
 
 export default Heading;
