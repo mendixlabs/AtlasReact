@@ -1,5 +1,5 @@
 import React, { ReactElement } from "react";
-import classnames from "classnames";
+import classNames from "classnames";
 import { ButtonProps } from "../../typings/ButtonProps";
 import { ButtonVariant } from "../../typings/ButtonVariant";
 
@@ -15,7 +15,7 @@ const Button = ({
     fullwidth = false,
     disabled = false
 }: ButtonProps): ReactElement => {
-    const className = classnames(
+    const className = classNames(
         "btn mx-button",
         size && `btn-${size}`,
         `btn-${variant}`,

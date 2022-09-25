@@ -1,10 +1,10 @@
 import React, { ReactElement } from "react";
-import classnames from "classnames";
+import classNames from "classnames";
 import { ParagraphProps } from "../../typings/ParagraphProps";
 import { ParagraphRole } from "../../typings/ParagraphRole";
 
 const Paragraph = ({ customClass, role, children }: ParagraphProps): ReactElement => {
-    const className = classnames(
+    const className = classNames(
         "mx-text",
         role === ParagraphRole.detail && "text-detail",
         customClass && customClass

@@ -1,42 +1,31 @@
 import React, { ReactElement } from "react";
-import classnames from "classnames";
+import classNames from "classnames";
 import { DialogProps } from "../../typings/DialogProps";
 
 import "./Dialog.css";
+import DialogCloseButton from "./DialogCloseButton/DialogCloseButton";
 
 const Dialog = ({
     customClass,
     title,
     closeHandler,
     children,
-    showHeader = true 
+    showHeader = true
 }: DialogProps): ReactElement => {
     return (
         <div className="modal-dialog-wrapper">
             <div
                 role="dialog"
-                className={classnames("modal-dialog mx-window mx-window-active", customClass && customClass)}
+                className={classNames("modal-dialog mx-window mx-window-active", customClass && customClass)}
                 aria-modal="true"
                 data-focus-capturing="modal"
             >
                 <div className="modal-content mx-window-content">
                     {showHeader === false ? (
-                        <button
-                            onClick={closeHandler}
-                            type="button"
-                            className="close close-without-header"
-                            title="close"
-                            aria-label="close"
-                        >×</button>
+                        <DialogCloseButton showHeader={showHeader} closeHandler={closeHandler} />
                     ) : (
                         <div className="modal-header mx-window-header">
-                            <button
-                                onClick={closeHandler}
-                                type="button"
-                                className="close"
-                                title="close"
-                                aria-label="close"
-                            >×</button>
+                            <DialogCloseButton showHeader={showHeader} closeHandler={closeHandler} />
                             <h4>{title}</h4>
                         </div>
                     )}
