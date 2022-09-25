@@ -1,5 +1,5 @@
-import classnames from "classnames";
 import React, { ReactElement } from "react";
+import classnames from "classnames";
 import { ButtonProps } from "../../typings/ButtonProps";
 import { ButtonVariant } from "../../typings/ButtonVariant";
 
@@ -27,8 +27,9 @@ const Button = ({
     /**
      * Unfortunately Atlas UI's CSS doesn't check for the value of the disabled tags:
      * [data-disabled='false'] or [aria-disabled='false'].
-     * but only looks for the existence of those tags to disable a button. Therefore we need some ugly
-     * conditional rendering to make this work properly.
+     * 
+     * Instead it only looks for the existence of those tags to disable a button. Therefore we need some 
+     * ugly conditional rendering to make this work properly.
      */
     if (disabled) {
         return (
