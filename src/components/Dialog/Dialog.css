@@ -13,8 +13,13 @@
     height: auto;
 }
 
+.modal-dialog .modal-content .close {
+    position: absolute;
+    right: 20px;
+    z-index: 10000;
+}
+
 .modal-dialog .mx-window-content .close-without-header {
-    margin-right: 20px;
     margin-top: 15px;
     color: #000;
     opacity: 1;
@@ -26,6 +31,18 @@
 
 .modal-dialog .mx-window-header {
     cursor: default;
+}
+
+/*
+    We add these styles to make sure the title doesn't overlap with the close button.
+    Also, this makes sure we don't get multi-line titles and the title gracefully cuts off before it reaches
+    the close button with an ellipsis text-overflow.
+*/
+.modal-header .modal-title {
+    width: calc(100% - 30px);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 .modal-dialog .modal-body {

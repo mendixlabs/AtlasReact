@@ -16,8 +16,9 @@ import Button from "./Button/Button";
 import Dialog from "./Dialog/Dialog";
 import Heading from "./Heading/Heading";
 import Paragraph from "./Paragraph/Paragraph";
+import Container from "./Container/Container";
 
 // Types
 import AtlasTypes from "../typings/ExternalTypes";
 
-export { AtlasTypes, Button, Dialog, Heading, Paragraph };
+export { AtlasTypes, Button, Dialog, Heading, Paragraph, Container };

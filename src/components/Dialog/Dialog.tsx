@@ -26,7 +26,7 @@ const Dialog = ({
                     ) : (
                         <div className="modal-header mx-window-header">
                             <DialogCloseButton showHeader={showHeader} closeHandler={closeHandler} />
-                            <h4>{title}</h4>
+                            <h4 className="modal-title">{title}</h4>
                         </div>
                     )}
                     <div data-focusindex="0" className="modal-body mx-window-body">
