@@ -13,12 +13,14 @@
 
 // Components
 import Button from "./Button/Button";
+import BadgeButton from "./Button/BadgeButton";
 import Dialog from "./Dialog/Dialog";
 import Heading from "./Heading/Heading";
 import Paragraph from "./Paragraph/Paragraph";
 import Container from "./Container/Container";
+import Form from "./Form/Form";
 
 // Types
 import AtlasTypes from "../typings/ExternalTypes";
 
-export { AtlasTypes, Button, Dialog, Heading, Paragraph, Container };
+export { AtlasTypes, Button, BadgeButton, Dialog, Heading, Paragraph, Container, Form };
